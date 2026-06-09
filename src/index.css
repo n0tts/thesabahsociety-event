@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Libre Caslon Text", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-label: "Hanken Grotesk", sans-serif;
+
+  --color-forest-deep: #2D4A22;
+  --color-forest-medium: #3C612F;
+  --color-forest-light: #4A783C;
+  --color-anniversary-gold: #C67139;
+  --color-anniversary-gold-light: #E9A06F;
+  --color-paper-white: #FDFBF7;
+  --color-charcoal-text: #2D4A22;
+}
+
+@utility anniversary-glow {
+  text-shadow: 0 0 15px rgba(198, 113, 57, 0.4);
+}
+
+@utility gold-border-gradient {
+  border-image: linear-gradient(to right, transparent, #C67139, transparent) 1;
+}
+
