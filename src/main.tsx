@@ -8,7 +8,7 @@ import './index.css';
 document.addEventListener('DOMContentLoaded', () => {
   // --- STATE VARIABLES ---
   let exhibitionIndex = 0;
-  const totalExhibits = 3;
+  const totalExhibits = 4;
 
   // --- DOM ELEMENT REFERENCES ---
   const mainNavigation = document.getElementById('main-navigation');
@@ -266,4 +266,41 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+  // --- CARD DESCRIPTION TOGGLE ACTIONS ---
+  const educationShort = document.getElementById('education-desc-short');
+  const educationFull = document.getElementById('education-desc-full');
+
+  const toggleEducation = () => {
+    if (educationShort && educationFull) {
+      educationShort.classList.toggle('hidden');
+      educationFull.classList.toggle('hidden');
+    }
+  };
+
+  if (educationShort) educationShort.addEventListener('click', toggleEducation);
+  if (educationFull) educationFull.addEventListener('click', toggleEducation);
+
+  // --- VENDORS MODAL INITIATORS ---
+  const vendorsModalOverlay = document.getElementById('vendors-modal-overlay');
+  const vendorsModalCloseBtn = document.getElementById('vendors-modal-close-btn');
+  const vendorsModalBackdrop = document.getElementById('vendors-modal-backdrop');
+  const exhibitionVendorsBtn = document.getElementById('exhibition-vendors-btn');
+
+  const openVendorsModal = () => {
+    if (vendorsModalOverlay) {
+      vendorsModalOverlay.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+  };
+
+  const closeVendorsModal = () => {
+    if (vendorsModalOverlay) {
+      vendorsModalOverlay.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+  };
+
+  if (exhibitionVendorsBtn) exhibitionVendorsBtn.addEventListener('click', openVendorsModal);
+  if (vendorsModalCloseBtn) vendorsModalCloseBtn.addEventListener('click', closeVendorsModal);
+  if (vendorsModalBackdrop) vendorsModalBackdrop.addEventListener('click', closeVendorsModal);
 });
