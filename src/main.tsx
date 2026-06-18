@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (footerShareBtn) {
     footerShareBtn.addEventListener('click', () => {
       // Copy to clipboard fallback
-      const shareUrl = 'https://thesabahpages.com/anniversary';
+      const shareUrl = 'https://thesabahsociety.com/anniversary';
       navigator.clipboard.writeText(shareUrl).then(() => {
         alert(`Registration Link Copied: ${shareUrl}`);
       }).catch(() => {
