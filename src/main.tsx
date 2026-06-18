@@ -49,11 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Sticky nav toggle
     if (mainNavigation) {
       if (scrollY > 80) {
-        mainNavigation.classList.remove('bg-white/80', 'border-[#3C612F]/10', 'py-4.5', 'top-8');
+        mainNavigation.classList.remove('bg-white/80', 'border-[#3C612F]/10', 'py-4.5', 'top-16', 'md:top-12');
         mainNavigation.classList.add('bg-white/95', 'border-[#C67139]/30', 'shadow-lg', 'py-3', 'top-2');
       } else {
         mainNavigation.classList.remove('bg-white/95', 'border-[#C67139]/30', 'shadow-lg', 'py-3', 'top-2');
-        mainNavigation.classList.add('bg-white/80', 'border-[#3C612F]/10', 'py-4.5', 'top-8');
+        mainNavigation.classList.add('bg-white/80', 'border-[#3C612F]/10', 'py-4.5', 'top-16', 'md:top-12');
       }
     }
 
@@ -218,7 +218,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   };
-  const previewCatalogueBtn = document.getElementById('auction-catalogue-btn');
+
+  const previewCatalogueBtn = document.getElementById('auction-catalogue-btn');
   if (previewCatalogueBtn) previewCatalogueBtn.addEventListener('click', openCatalogueModal);
   if (catalogueModalCloseBtn) catalogueModalCloseBtn.addEventListener('click', closeCatalogueModal);
   if (catalogueModalBackdrop) catalogueModalBackdrop.addEventListener('click', closeCatalogueModal);
