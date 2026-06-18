@@ -218,8 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   };
-
-  const previewCatalogueBtn = document.getElementById('auction-catalogue-btn');
+  const previewCatalogueBtn = document.getElementById('auction-catalogue-btn');
   if (previewCatalogueBtn) previewCatalogueBtn.addEventListener('click', openCatalogueModal);
   if (catalogueModalCloseBtn) catalogueModalCloseBtn.addEventListener('click', closeCatalogueModal);
   if (catalogueModalBackdrop) catalogueModalBackdrop.addEventListener('click', closeCatalogueModal);
@@ -258,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (footerShareBtn) {
     footerShareBtn.addEventListener('click', () => {
       // Copy to clipboard fallback
-      const shareUrl = 'https://thesabahsociety.com/anniversary';
+      const shareUrl = 'https://thesabahpages.com/anniversary';
       navigator.clipboard.writeText(shareUrl).then(() => {
         alert(`Registration Link Copied: ${shareUrl}`);
       }).catch(() => {
@@ -266,6 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
   // --- CARD DESCRIPTION TOGGLE ACTIONS ---
   const educationShort = document.getElementById('education-desc-short');
   const educationFull = document.getElementById('education-desc-full');
